@@ -1,4 +1,6 @@
 import { Flex } from "@chakra-ui/react";
+import Footer from "components/Footer";
+import Nav from "components/Nav";
 
 export default function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
@@ -9,6 +11,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
         display: "flex",
       }}
     >
+      <Nav />
       <Flex
         mt={6}
         sx={{
@@ -18,6 +21,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
       >
         {children}
       </Flex>
+      <Footer />
     </Flex>
   );
 }
